@@ -14,7 +14,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: jevgenijsivasins # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: "." # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: "7.0.102" # set this to the dot net version to use
+  DOTNET_VERSION: "7.0.102" # set this to the dot net version to use  
 
 jobs:
   build:
@@ -39,12 +39,12 @@ jobs:
           package: "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
         
         - uses: actions/checkout@master
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - uses: azure/arm-deploy@v1
-      with:
-        resourceGroupName: github-action-arm-rg
-        template: ./src/infrastructure/webapp.json
-        parameters: examples/template/parameters.json storageAccountType=Standard_LRS sqlServerPassword=${{ secrets.SQL_SERVER }}
-        additionalArguments: "--what-if --rollback-on-error --what-if-exclude-change-types Create Ignore"
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: azure/arm-deploy@v1
+        with:
+          resourceGroupName: github-action-arm-rg
+          template: ./src/infrastructure/webapp.json
+          parameters: examples/template/parameters.json storageAccountType=Standard_LRS sqlServerPassword=${{ secrets.SQL_SERVER }}
+          additionalArguments: "--what-if --rollback-on-error --what-if-exclude-change-types Create Ignore"
