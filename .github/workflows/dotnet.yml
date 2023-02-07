@@ -15,6 +15,7 @@ env:
   AZURE_WEBAPP_NAME: jevgenijsivasins # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: "." # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: "7.0.102" # set this to the dot net version to use  
+  ResourceGroupName: "bootcamp-resources"
 
 jobs:
   build:
@@ -38,13 +39,12 @@ jobs:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
           package: "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
         
-        - uses: actions/checkout@master
+      - uses: actions/checkout@master
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: azure/arm-deploy@v1
         with:
-          resourceGroupName: github-action-arm-rg
+          resourceGroupName: ${{ env.ResourceGroupName }}
           template: ./src/infrastructure/webapp.json
-          parameters: examples/template/parameters.json storageAccountType=Standard_LRS sqlServerPassword=${{ secrets.SQL_SERVER }}
-          additionalArguments: "--what-if --rollback-on-error --what-if-exclude-change-types Create Ignore"
+          parameters: storageAccountType=Standard_LRS
