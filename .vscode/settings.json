@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7318215a-de9f-46ea-aeca-f6cb3da55361/AppServices/subscriptions/7318215a-de9f-46ea-aeca-f6cb3da55361/resourceGroups/bootcamp-resources/providers/Microsoft.Web/sites/jevgenijsivasins",
+    "appService.deploySubpath": "src"
+}

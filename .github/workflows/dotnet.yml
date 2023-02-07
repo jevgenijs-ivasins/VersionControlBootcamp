@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Azure WebApp
+    - uses: Azure/webapps-deploy@v2.2.5
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3

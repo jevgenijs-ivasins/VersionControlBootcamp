@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jevgenijs.ivasins\\bootcamp\\repo\\src\\src.csproj": {}
+    "C:\\Users\\jevgenijs.ivasins\\Bootcamp\\Repo\\src\\src.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jevgenijs.ivasins\\bootcamp\\repo\\src\\src.csproj": {
+    "C:\\Users\\jevgenijs.ivasins\\Bootcamp\\Repo\\src\\src.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jevgenijs.ivasins\\bootcamp\\repo\\src\\src.csproj",
+        "projectUniqueName": "C:\\Users\\jevgenijs.ivasins\\Bootcamp\\Repo\\src\\src.csproj",
         "projectName": "src",
-        "projectPath": "C:\\Users\\jevgenijs.ivasins\\bootcamp\\repo\\src\\src.csproj",
+        "projectPath": "C:\\Users\\jevgenijs.ivasins\\Bootcamp\\Repo\\src\\src.csproj",
         "packagesPath": "C:\\Users\\jevgenijs.ivasins\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jevgenijs.ivasins\\bootcamp\\repo\\src\\obj\\",
+        "outputPath": "C:\\Users\\jevgenijs.ivasins\\Bootcamp\\Repo\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jevgenijs.ivasins\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jevgenijs.ivasins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
